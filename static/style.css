@@ -49,3 +49,20 @@ footer {
     padding: 20px;
     background: #dfe6e9;
 }
+input {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+}
+
+/* button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+} */
+
+/* button:hover {
+    background-color: #45a049;
+} */

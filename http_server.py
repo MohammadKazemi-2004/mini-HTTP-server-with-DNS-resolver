@@ -56,47 +56,17 @@ while True:
         else:
             status = 405
             response = b"HTTP/1.1 405 Methon Not Allowed\n\n"
-              
-    elif path == '/style.css':
+     
+    else :
+        file_address = 'static/' + path     
         if method == "GET":
-            with open('static/style.css', 'rb') as f:
+            with open(file_address, 'rb') as f:
                 file = f.read()
             status = 200
             response = b"HTTP/1.1 200 OK\n\n" + file
         else:
             status = 405
-            response = b"HTTP/1.1 405 Methon Not Allowed\n\n"
-            
-    elif path == '/script.js':
-        if method == "GET":
-            with open('static/script.js', 'rb') as f:
-                file = f.read()
-            status = 200
-            response = b"HTTP/1.1 200 OK\n\n" + file
-        else:
-            status = 405
-            response = b"HTTP/1.1 405 Methon Not Allowed\n\n"
-                
-    elif path == '/images/logo.png':
-        if method == "GET":
-            with open('static/images/logo.png', 'rb') as f:
-                file = f.read()
-            status = 200
-            response = b"HTTP/1.1 200 OK\n\n" + file
-        else:
-            status = 405
-            response = b"HTTP/1.1 405 Methon Not Allowed\n\n"
-        
-    elif path == '/global-network.png':
-        if method == "GET":
-            with open('static/images/global-network.png', 'rb') as f:
-                file = f.read()
-            status = 200
-            response = b"HTTP/1.1 200 OK\n\n" + file
-    else:
-        status = 405
-        response = b"HTTP/1.1 405 Methon Not Allowed\n\n"
-                
+            response = b"HTTP/1.1 405 Methon Not Allowed\n\n"       
 
         
     connection_socket.send(response)

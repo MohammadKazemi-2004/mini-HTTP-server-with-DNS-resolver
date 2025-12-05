@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Simple Server</title>
-    <link rel="icon" type="image/x-icon" href="global-network.png">
+    <link rel="icon" type="image/x-icon" href="images/global-network.png">
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -15,8 +15,19 @@
         <h1>Welcome to My Python Web Server</h1>
         <p>This website is served using a custom socket-based HTTP server!</p>
         <button onclick="sayHello()">Click Me</button>
-        <!-- <button onclick="sayHello()">Click Me</button> -->
     </header>
+
+    <section>
+        <form action="/result" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+            <br><br>
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" required>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
     <section class="features">
         <h2>Features</h2>
