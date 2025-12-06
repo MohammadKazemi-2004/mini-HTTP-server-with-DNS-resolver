@@ -43,9 +43,7 @@ from dnslib import DNSRecord, RR, QTYPE, A
 import socketserver
 
 DNS_table = {
-    'nwtest1.local': '127.0.0.1',
-    # 'nwtest1.local': '192.168.1.50',
-    'test.example.com': '192.168.1.100'
+    'nwtest.ir': '127.0.0.1',
 }
 
 class DNS_handler(socketserver.BaseRequestHandler):
