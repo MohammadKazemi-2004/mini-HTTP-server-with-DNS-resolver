@@ -3,43 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Server</title>
-    <link rel="icon" type="image/x-icon" href="images/global-network.png">
+    <title>Python Server</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="icon" type="image/x-icon" href="images/global-network.png">
+
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .form-header {
+            margin-bottom: 30px;
+        }
+        
+        .form-header h2 {
+            color: #2d3748;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .form-header p {
+            color: #718096;
+            font-size: 1.1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #4a5568;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .form-hint {
+            display: block;
+            margin-top: 5px;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        .submit-section {
+            margin-top: 40px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .submit-note {
+            margin-top: 20px;
+            color: #48bb78;
+            font-weight: 500;
+            padding: 15px;
+            background: #f0fff4;
+            border-radius: 10px;
+            border-left: 4px solid #48bb78;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <img src="images/logo.png" alt="Logo" class="logo">
-        <h1>Welcome to My Python Web Server</h1>
-        <p>This website is served using a custom socket-based HTTP server!</p>
-        <button onclick="sayHello()">Click Me</button>
+        <h1>Welcome to Python Web Server</h1>
+        <p>Submit your information and get redirected to a personalized welcome page!</p>
+        <button onclick="sayHello()">👋 Say Hello</button>
     </header>
 
-    <section>
-        <form action="/result" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" required>
-            <br><br>
-            <label for="age">Age:</label>
-            <input type="number" name="age" id="age" required>
-            <br><br>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+    <!-- <section>
+        <div class="form-container">
+            <div class="form-header">
+                <h2>📝 Submit Your Information</h2>
+                <p>Fill out this form and you'll be redirected to a custom welcome page!</p>
+            </div> 
+            
+             <form action="/result" method="POST" id="userForm">
+                <div class="form-group">
+                    <label for="name">👤 Your Name:</label>
+                    <input type="text" 
+                           name="name" 
+                           id="name" 
+                           required 
+                           placeholder="Enter your full name"
+                           minlength="2" 
+                           maxlength="50">
+                    <span class="form-hint">Minimum 2 characters, maximum 50 characters</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">🎂 Your Age:</label>
+                    <input type="number" 
+                           name="age" 
+                           id="age" 
+                           required 
+                           placeholder="Enter your age"
+                           min="1" 
+                           max="120">
+                    <span class="form-hint">Must be between 1 and 120 years old</span>
+                </div>
+                
+                <div class="submit-section">
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        🚀 Submit & See Welcome Page
+                    </button>
+                    
+                    <div class="submit-note" id="submitNote">
+                        After submitting, you'll be automatically redirected to your personalized welcome page!
+                    </div>
+                </div>
+            </form> 
+        </div>
+    </section> -->
 
     <section class="features">
-        <h2>Features</h2>
+        <h2>✨ Server Features</h2>
         <ul>
-            <li>✔ Fast & lightweight</li>
-            <li>✔ Pure Python (no frameworks)</li>
-            <li>✔ Serves HTML, CSS, JS, images</li>
+            <li> Fast & lightweight</li>
+            <li> Pure Python (no frameworks)</li>
+            <li> Serves HTML, CSS, JS, images</li>
+            <!-- <li>✔ Handles form submissions with POST requests</li> -->
+            <!-- <li>✔ Redirects users to personalized pages</li> -->
+            <!-- <li>✔ Dynamic HTML generation with user data</li> -->
+            <!-- <li>✔ Real-time form validation</li> -->
+            <!-- <li>✔ Beautiful animations and effects</li> -->
+            <!-- <li>✔ Secure data handling</li> -->
         </ul>
     </section>
 
     <footer>
-        <p>Made with ❤️ using Python</p>
+        <p>🚀 Powered by Python Socket Programming</p>
+        <p class="server-info">Server running on http://127.0.0.1:80</p>
     </footer>
 
     <script src="script.js"></script>
