@@ -2,6 +2,9 @@
 import socket
 import logging
 from datetime import datetime
+from pathlib import Path
+
+Path('logs').mkdir(exist_ok=True)
 #### for log ####
 access_logger = logging.getLogger("access")
 access_logger.setLevel(logging.INFO)
